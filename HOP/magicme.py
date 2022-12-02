@@ -136,6 +136,8 @@ class magic:
         self.selected['Predicted1'] = pandas.Series( pred1 )
         self.selected['Predicted2'] = pandas.Series( pred2 )
         self.selected['Predicted3'] = pandas.Series( pred3 )
+        self.selected['PredictedAVG'] = (self.selected['Predicted1']+self.selected['Predicted2']+self.selected['Predicted3'])/3
+        
         print("GridSeearchCV convergence")
         print("Lasso",clf2.best_params_)
         print("DecisionTree",clf3.best_params_)
